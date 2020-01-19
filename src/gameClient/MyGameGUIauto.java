@@ -53,24 +53,19 @@ public static DGraph graph;
 public static Graph_Algo gg ;
 double maxX=0,maxY=0,minX=0,minY=0;
 public static final double Epsilon=0.0001;
-public int scenario;
-public  static Logger_KML kml;
-private long time;
+
 	
 	public MyGameGUIauto()  {
 		this.setTitle("The Maza Of Waze");
 		this.setSize(900, 900);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		String level= JOptionPane.showInputDialog(this,"Please insert Level between [0,23]");
-
-		scenario =Integer.parseInt(level);
-
+		int scenario =Integer.parseInt(level);
 		
 		if (scenario<=23&&scenario>=0)
 			 game = Game_Server.getServer(scenario); // you have [0,23] games
 		else 
 			game=Game_Server.getServer(0);
-		kml=new Logger_KML(scenario);
 		String g = game.getGraph();
 		gg = new Graph_Algo();
 		graph=new DGraph();
@@ -79,7 +74,7 @@ private long time;
 		min_max();
 		JSONObject line;
 		String info = game.toString();
-		time=game.timeToEnd();
+
 		try {
 			line = new JSONObject(info);
 			JSONObject ttt = line.getJSONObject("GameServer");
@@ -205,7 +200,7 @@ private long time;
 					ArrayList<Robot> robots=this.Robots;
 					List<String> rob = game.getRobots();
 			        for (int i = 1; i <= rob.size(); i++) {
-			            g2d.drawString(rob.get(i - 1), 50, 70 + (20 * i));
+			            g2d.drawString(rob.get(i - 1), 150, 70 + (20 * i));
 			        }
 					
 					for (int i=0 ;i<robots.size();i++)
@@ -218,15 +213,8 @@ private long time;
 						 g2d.setFont(new Font("Arial", Font.BOLD, 15));
 					}
 					
-					time=game.timeToEnd()/1000;
-					g2d.setColor(Color.BLACK);
-					g2d.setFont(new Font("Arial", Font.BOLD, 20));
-					 g2d.drawString("Time left: " + (this.time ), 50, 150);
 					
-					g2d.setColor(Color.RED);
-					g2d.setFont(new Font("Arial", Font.BOLD, 20));
-					g2d.drawString(game.toString(), 50, 50);
-						
+					
 					
 			      
 		}
@@ -274,10 +262,9 @@ private long time;
 			} 
 				catch (InterruptedException e) {e.printStackTrace();}	
 			}
-			kml.endKml(scenario);
+		
 			String results = game.toString();
 			System.out.println("Game Over: "+results);
-			this.setVisible(false);
 		}
 		
 		
@@ -335,7 +322,6 @@ private long time;
 					
 					System.out.println(dest);
 					game.chooseNextEdge(r.getid(), dest);
-					kml.placemark(r.getpos(), r.getid());
 					System.out.println("Turn to node: "+dest+"  time to end:"+(t/1000));
 					
 					
@@ -345,7 +331,7 @@ private long time;
 			
 		}
 	}
-	//not finished yet 
+
 	public static EdgeData GetFE(DGraph graph,Fruit f) {
 		double  x1,x2,x3,y1,y2,y3;
 		x3=f.getPOS().x();
@@ -468,6 +454,7 @@ private long time;
 		
 	}
 	public static void main(String[] args) {
-		
+		MyGameGUIauto gg=new MyGameGUIauto();
+		gg.run();
 	}
 }
