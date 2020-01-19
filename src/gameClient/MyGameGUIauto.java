@@ -59,9 +59,9 @@ public static final double Epsilon=0.0001;
 		this.setTitle("The Maza Of Waze");
 		this.setSize(900, 900);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		//String level= JOptionPane.showInputDialog(this,"Please insert Level between [0,23]");
-		//int scenario =Integer.parseInt(level);
-		int scenario=2;
+		String level= JOptionPane.showInputDialog(this,"Please insert Level between [0,23]");
+		int scenario =Integer.parseInt(level);
+		
 		if (scenario<=23&&scenario>=0)
 			 game = Game_Server.getServer(scenario); // you have [0,23] games
 		else 
@@ -106,8 +106,7 @@ public static final double Epsilon=0.0001;
 							b=new Robot(src_node,a,0,Fruit.get(c));
 							Robots.add(b);
 								game.addRobot(src_node);	
-								
-						System.out.println(a+" : "  + src_node+" : " +c);	
+									
 		
 				}else {
 					af=(int)Math.random()*(graph.getV().size()-1);
@@ -285,7 +284,7 @@ public static final double Epsilon=0.0001;
 	 * @param log
 	 */
 	
-	private static void moveRobots(game_service game,  Graph_Algo gg ,DGraph graph) {
+	public static void moveRobots(game_service game,  Graph_Algo gg ,DGraph graph) {
 		List<String> log = game.move();
 		if(log!=null) {
 			long t = game.timeToEnd();
@@ -333,7 +332,7 @@ public static final double Epsilon=0.0001;
 		}
 	}
 	//not finished yet 
-	private static EdgeData GetFE(DGraph graph,Fruit f) {
+	public static EdgeData GetFE(DGraph graph,Fruit f) {
 		double  x1,x2,x3,y1,y2,y3;
 		x3=f.getPOS().x();
 		y3=f.getPOS().y();
@@ -373,30 +372,26 @@ public static final double Epsilon=0.0001;
 	 * @param src
 	 * @return
 	 */
-	private static int nextNode(DGraph g, Graph_Algo gg,Robot robot) {
-		int ans = -1;
+	public static int nextNode(DGraph g, Graph_Algo gg,Robot robot) {
 		List<node_data> path=new LinkedList<node_data>();
 		EdgeData fruitedg=null;
 		if(robot.getFruit()!=null&& Fruit.contains(robot.getFruit()))// and fruits contat robot fruit 
 			{
 			fruitedg=GetFE(g,robot.getFruit());
-			//System.out.println(" src : "+fruitedg.getSrc()+" dest: "+fruitedg.getDest());
 		if(robot.getsrc()==fruitedg.getSrc() ) {
 			
 			if(g.getEdge(robot.getsrc(),fruitedg.getDest())==null) throw new RuntimeException ("there is no edge between src and dest"+robot.getsrc()+" "+fruitedg.getDest());
-	//	System.out.println(robot.getsrc()+","+ fruitedg.getSrc());
-		//	robot.SetFruit(null);
+	
+	
 			return fruitedg.getDest();
 		}else {
 			path=gg.shortestPath(robot.getsrc(), fruitedg.getSrc());
-		//	System.out.println("path from secon if "+path.get(1).getKey());
+		
 		return path.get(1).getKey();
 		}
 		}
 		
-	//	int y=(int) Math.random()*(Fruit.size()-1);
-		// yeta5en she y get(y) return null
-	//	robot.SetFruit(Fruit.get(y));
+
 		double cmp=Double.MAX_VALUE;
 		double pathcm = 0;
 		EdgeData FG =null ;
@@ -407,7 +402,7 @@ public static final double Epsilon=0.0001;
 		for(Fruit f: fruit12) {
 			
 			fruitedg=GetFE(g,f);
-			//System.out.println(robot.getsrc());
+			
 
 			if(pathcm<cmp){
 				Fruit ag=new Fruit(f);
@@ -419,14 +414,12 @@ public static final double Epsilon=0.0001;
 			
 		}	
 		fruit12.remove(robot.getFruit());	
-		//System.out.println("fg dest:"+FG.getDest());
-
-		
 		if(robot.getsrc() == FG.getSrc()) return FG.getDest();
 		path=gg.shortestPath(robot.getsrc(), FG.getSrc());
-	//	System.out.println(path.size() +" : " + robot.getsrc() + " : " + fruitedg.getSrc() );
-		if(path.size()!=0)
+
+		if(path.size()!=0) {
 			return path.get(1).getKey();
+		}
 		return FG.getSrc();
 
 	}

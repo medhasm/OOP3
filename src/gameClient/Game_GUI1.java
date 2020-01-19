@@ -183,12 +183,7 @@ public class Game_GUI1 extends JFrame implements ActionListener, MouseListener {
 						g2d.setColor(Color.RED);
 						g2d.setFont(new Font("deafult", Font.BOLD,14));
 						String weight = s.getWeight() + "";
-						
 						g2d.drawLine(p.ix(), p.iy(), p2.ix(), p2.iy());
-						
-						//g.drawString(Double.toString(s.getWeight()), (int)((p.x()+(int)p2.x())/2),	(int)((p.y()+(int)p2.y())/2));
-					
-
 						g2d.setColor(Color.YELLOW);
 						int x2=(int) ((0.8*p2.ix())+ (0.2*p.ix()));
 						int y2 =(int)((0.8*p2.iy())+ (0.2*p.iy()));
@@ -209,8 +204,7 @@ public class Game_GUI1 extends JFrame implements ActionListener, MouseListener {
 				}
 				 Graphics2D g2dComponent = (Graphics2D) g;
 		         g2dComponent.drawImage(bufferedImage, null, 0, 0);
-				//paintfruit(g);
-				//paintrobot(g);
+
 		}
 		private void paintfruit(Graphics g )
 		{
@@ -225,10 +219,7 @@ public class Game_GUI1 extends JFrame implements ActionListener, MouseListener {
 				g.fillOval((int)x,(int) y, 15, 15);
 			}
 		}
-		private void paintrobot(Graphics g )
-		{
-			
-		}
+
 		private double scale(double data, double r_min, double r_max, 
 				double t_min, double t_max)
 		{
