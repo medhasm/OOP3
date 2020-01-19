@@ -43,31 +43,5 @@ class MygameAutoJunit {
 		
 		
 	}
-/*
-	@Test
-	void testNextNode() {
-		int dest=0;
-		Iterator<String> fruite=game.getFruits().iterator();
-		String s=fruite.next();
-		fruit.init(s);
-		MyGameGUIauto gg;
-		DGraph graph=new DGraph();
-		graph.init(game.getGraph());
-		Graph_Algo gg1=new Graph_Algo();
-		gg1.init(game.getGraph());
-		EdgeData edge=MyGameGUIauto.GetFE((DGraph)graph, fruit);
-		System.out.println(edge.getDest());
-		Robot r=new Robot(9, 0, 0.0, fruit);
-		game.addRobot(9);
-		game.startGame();
-		
-		dest=MyGameGUIauto.nextNode(graph, gg1, r);
-		game.stopGame();
-		System.out.println(dest);
-	//	assertEquals(dest,edge.getDest());	
-		
-		
-	}
-	
-*/
+
 }

@@ -74,7 +74,7 @@ public class Game_GUI1 extends JFrame implements ActionListener, MouseListener {
 					f.init(f_iter.next());
 					this.fruits.add(f);
 				}
-				//AddRobot(rs);
+			
 				min_max();
 				}
 			catch (JSONException e) 
