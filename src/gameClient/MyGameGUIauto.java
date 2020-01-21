@@ -52,6 +52,7 @@ public static game_service game;
 public static DGraph graph;
 public static Graph_Algo gg ;
 double maxX=0,maxY=0,minX=0,minY=0;
+public static long time;
 public static final double Epsilon=0.0001;
 
 	
@@ -214,7 +215,14 @@ public static final double Epsilon=0.0001;
 					}
 					
 					
+					time=game.timeToEnd()/1000;
+					g2d.setColor(Color.BLACK);
+					g2d.setFont(new Font("Arial", Font.BOLD, 20));
+					 g2d.drawString("Time left: " + (this.time ), 50, 150);
 					
+					g2d.setColor(Color.RED);
+					g2d.setFont(new Font("Arial", Font.BOLD, 20));
+					g2d.drawString(game.toString(), 50, 50);
 					
 			      
 		}
