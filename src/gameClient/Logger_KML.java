@@ -66,5 +66,10 @@ public class Logger_KML {
 	   
    }
 
+public String getString() {
+	// TODO Auto-generated method stub
+	return kml;
+}
+
    
 }

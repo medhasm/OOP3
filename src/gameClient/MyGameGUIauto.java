@@ -55,33 +55,41 @@ public static Graph_Algo gg ;
 double maxX=0,maxY=0,minX=0,minY=0;
 public static long time;
 public static final double Epsilon=0.0001;
-Image img,robot,apple,banana;
-int hight=900;
-int width=900;
-
+private Image img,robot,apple,banana;
+private int hight=900;
+private int width=900;
+private static  Logger_KML kml;
+private int scenario;
+private int id;
 	
 	public MyGameGUIauto()  {
 		this.setTitle("The Maza Of Waze");
-		this.setSize(900, 900);
+		this.setSize(width, hight);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		img = Toolkit.getDefaultToolkit().createImage("11.jpg");
 		robot = Toolkit.getDefaultToolkit().createImage("Robot.png");
 		apple = Toolkit.getDefaultToolkit().createImage("apple.png");
 		banana = Toolkit.getDefaultToolkit().createImage("banana.png");
-
+		String ID= JOptionPane.showInputDialog(this,"Please insert your ID");
+		id =Integer.parseInt(ID);
 		String level= JOptionPane.showInputDialog(this,"Please insert Level between [0,23]");
-		int scenario =Integer.parseInt(level);
+		scenario =Integer.parseInt(level);
 		
 		if (scenario<=23&&scenario>=0)
+		{
+			Game_Server.login(id);
 			 game = Game_Server.getServer(scenario); // you have [0,23] games
-		else 
+		}else {
+			Game_Server.login(id);
 			game=Game_Server.getServer(0);
+		}
 		String g = game.getGraph();
 		gg = new Graph_Algo();
 		graph=new DGraph();
 		graph.init(g);
 		gg.init(g);
 		min_max();
+		kml=new Logger_KML(scenario);
 		JSONObject line;
 		String info = game.toString();
 
@@ -99,7 +107,7 @@ int width=900;
 				String s=f_iter.next();
 					f.init(s);
 						this.Fruit.add(f);
-							System.out.println(s);
+							//System.out.println(s);
 						}
 			
 
@@ -154,7 +162,7 @@ int width=900;
 						double y_=scale(n.getLocation().y(),minY,maxY,200,700); 
 						Point3D p_=new Point3D(x_, y_);
 						g2d.fillOval(p_.ix(), p_.iy(), 10, 10);
-						g2d.setFont(new Font("deafult", Font.BOLD,14));	
+						g2d.setFont(new Font("deafult", Font.BOLD,20));	
 						g2d.setColor(Color.BLUE);
 						String key=n.getKey()+"";
 						
@@ -173,31 +181,30 @@ int width=900;
 							double y1=scale(graph.getNode(s.getDest()).getLocation().y(),minY,maxY,200,700); 
 							Point3D p2=new Point3D(x1, y1);
 							g2d.setColor(Color.RED);
-							g2d.setFont(new Font("deafult", Font.BOLD,14));
-							String weight = s.getWeight() + "";
-							
 							g2d.drawLine(p.ix(), p.iy(), p2.ix(), p2.iy());
-													
-							g2d.setColor(Color.YELLOW);
+							g2d.setFont(new Font("deafult", Font.BOLD,20));
+							
+							//String weight = s.getWeight() + "";
+							
+                            
+							
+                            g2d.setColor(Color.YELLOW);
 							int x2=(int) ((0.8*p2.ix())+ (0.2*p.ix()));
 							int y2 =(int)((0.8*p2.iy())+ (0.2*p.iy()));
 							g2d.fillOval(x2-5,y2-5,10,10);
-							
-							
 						}
 						
 						}
 					
-					
-					
 					time=game.timeToEnd()/1000;
 					g2d.setColor(Color.BLACK);
 					g2d.setFont(new Font("Arial", Font.BOLD, 20));
-					 g2d.drawString("Time left: " + (this.time ), 50, 150);
+					g2d.drawString("Time left: " + (this.time ), 50, 150);
 					
 					g2d.setColor(Color.RED);
 					g2d.setFont(new Font("Arial", Font.BOLD, 20));
-					g2d.drawString(game.toString(), 50, 50);
+					g2d.drawString(game.toString(), 20, 50);
+					
 					paintfruit(g2d);
 					paintRobot(g2d);
 			      
@@ -231,18 +238,17 @@ int width=900;
 			ArrayList<Robot> robots=this.Robots;
 			List<String> rob = game.getRobots();
 	        for (int i = 1; i <= rob.size(); i++) {
-	            g2d.drawString(rob.get(i - 1), 150, 70 + (20 * i));
-	        }
+	        g2d.drawString(rob.get(i - 1), 20, 90);
+	     }
 			
-			for (int i=0 ;i<robots.size();i++)
+	     for (int i=0 ;i<robots.size();i++)
 			{
 				Robot r=robots.get(i);
-				int x=(int)(scale(r.getpos().x(),minX,maxX,50,850));
+       			int x=(int)(scale(r.getpos().x(),minX,maxX,50,850));
 				int y=(int)(scale(r.getpos().y(),minY,maxY,200,700));
-				//g2d.setColor(Color.BLACK);
-				//g2d.drawOval(x-15,y-15, 30, 30);
 		        g2d.drawImage(robot,x-15,y-15,this);
-
+		        //g2d.setColor(Color.BLACK);
+				//g2d.drawOval(x-15,y-15, 30, 30);
 				//g2d.setFont(new Font("Arial", Font.BOLD, 100));
 			}
 			
@@ -277,23 +283,32 @@ int width=900;
 		public void run()
 		{
 			game.startGame();
-			int index=0;
-			long time=150;
+			int ind=0;
+			long time=140;
+			int jj = 0;
 			while(game.isRunning()) {
 				
 				moveRobots(game, gg,graph);
 				
 				try {
+					List<String> stat = game.getRobots();
+					for(int i=0;i<stat.size();i++) 
+						System.out.println(jj+") "+stat.get(i));
 					this.repaint();
-					
-						Thread.sleep(time);
-						index++;				
+					ind++;
+					Thread.sleep(time);
+					jj++;				
 			} 
 				catch (InterruptedException e) {e.printStackTrace();}	
 			}
-		
+			kml.endKml(scenario);
+			String remark=kml.getString();
+			game.sendKML(remark);
+			//System.out.println(game.sendKML(remark));
 			String results = game.toString();
 			System.out.println("Game Over: "+results);
+			this.setVisible(false);
+			this.setDefaultCloseOperation(0);
 		}
 		
 		
@@ -315,49 +330,43 @@ int width=900;
 	
 	public static void moveRobots(game_service game,  Graph_Algo gg ,DGraph graph) {
 		List<String> log = game.move();
-		if(log!=null) {
+		if(log!=null)
+		{
 			long t = game.timeToEnd();
-			for(int i=0;i<log.size();i++) {
+			for(int i=0;i<log.size();i++)
+			{
 				String robot_json = log.get(i);
 				Robot demo=new Robot(robot_json);
-				for (Robot r : Robots) {
-					if(r.getid()==demo.getid()) {
-			Robots.get(r.getid()).init(robot_json);
+				for (Robot r : Robots) 
+				{
+					if(r.getid()==demo.getid()) 
+					{
+						Robots.get(r.getid()).init(robot_json);
 					}
-		
-
-		
 				}
 				
 			}
-			
-			
-			
 			Iterator<String> f_iter = game.getFruits().iterator();
-			
 			Fruit=new ArrayList<Fruit>();
-			while(f_iter.hasNext()) {
+			while(f_iter.hasNext())
+			{
 				Fruit Ban=new Fruit();
 				String s=f_iter.next();
-					Ban.init(s);
-						Fruit.add(Ban);
-							System.out.println(s);
-						}
+				Ban.init(s);
+				Fruit.add(Ban);
+			}
 			fruit12=new LinkedList<Fruit>(Fruit);
 			int dest=0;
-			for(Robot r:Robots) {
-				if(r.getdest()==-1) {
+			for(Robot r:Robots) 
+			{
+				if(r.getdest()==-1)
+				{
 					dest=nextNode(graph,gg,r);
-					
-					System.out.println(dest);
 					game.chooseNextEdge(r.getid(), dest);
+					kml.placemark(r.getpos(), r.getid());
 					System.out.println("Turn to node: "+dest+"  time to end:"+(t/1000));
-					
-					
 				}
 			}
-				
-			
 		}
 	}
 
