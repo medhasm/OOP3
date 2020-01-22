@@ -13,6 +13,7 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.Shape;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -54,12 +55,20 @@ public static Graph_Algo gg ;
 double maxX=0,maxY=0,minX=0,minY=0;
 public static long time;
 public static final double Epsilon=0.0001;
+Image img,robot,apple,banana;
+int hight=900;
+int width=900;
 
 	
 	public MyGameGUIauto()  {
 		this.setTitle("The Maza Of Waze");
 		this.setSize(900, 900);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		img = Toolkit.getDefaultToolkit().createImage("11.jpg");
+		robot = Toolkit.getDefaultToolkit().createImage("Robot.png");
+		apple = Toolkit.getDefaultToolkit().createImage("apple.png");
+		banana = Toolkit.getDefaultToolkit().createImage("banana.png");
+
 		String level= JOptionPane.showInputDialog(this,"Please insert Level between [0,23]");
 		int scenario =Integer.parseInt(level);
 		
@@ -129,7 +138,8 @@ public static final double Epsilon=0.0001;
 				super.paint(g);
 		        Graphics2D g2d = (Graphics2D) g;
 		        g2d.setBackground(new Color(240, 240, 240));
-		      
+		        g2d.drawImage(img,0,0,this);
+
 		        
 				Collection<node_data> node=graph.getV();
 				Iterator<node_data> nodes=node.iterator();
@@ -179,41 +189,6 @@ public static final double Epsilon=0.0001;
 						}
 					
 					
-					for (int i=0 ;i<this.Fruit.size();i++)
-						{
-					
-							Fruit fr=this.Fruit.get(i);
-							if (fr.getType()==1)
-							{
-								g2d.setColor(Color.CYAN);
-								int x=(int)(scale(fr.getPOS().x(),minX,maxX,50,850));
-								int y=(int)(scale(fr.getPOS().y(),minY,maxY,200,700));
-								g2d.fillOval(x-7,y-7, 20, 20);
-							}
-							if(fr.getType()==-1)
-							{
-								g2d.setColor(Color.GREEN);
-								int x=(int)(scale(fr.getPOS().x(),minX,maxX,50,850));
-								int y=(int)(scale(fr.getPOS().y(),minY,maxY,200,700));
-								g2d.fillOval(x-7,y-7, 20, 20);
-							}
-						}
-					ArrayList<Robot> robots=this.Robots;
-					List<String> rob = game.getRobots();
-			        for (int i = 1; i <= rob.size(); i++) {
-			            g2d.drawString(rob.get(i - 1), 150, 70 + (20 * i));
-			        }
-					
-					for (int i=0 ;i<robots.size();i++)
-					{
-						Robot r=robots.get(i);
-						int x=(int)(scale(r.getpos().x(),minX,maxX,50,850));
-						int y=(int)(scale(r.getpos().y(),minY,maxY,200,700));
-						g2d.setColor(Color.BLACK);
-						g2d.drawOval(x-15,y-15, 30, 30);
-						 g2d.setFont(new Font("Arial", Font.BOLD, 15));
-					}
-					
 					
 					time=game.timeToEnd()/1000;
 					g2d.setColor(Color.BLACK);
@@ -223,8 +198,54 @@ public static final double Epsilon=0.0001;
 					g2d.setColor(Color.RED);
 					g2d.setFont(new Font("Arial", Font.BOLD, 20));
 					g2d.drawString(game.toString(), 50, 50);
-					
+					paintfruit(g2d);
+					paintRobot(g2d);
 			      
+		}
+		private void paintfruit(Graphics2D g2d)
+		{
+			for (int i=0 ;i<this.Fruit.size();i++)
+			{
+		
+				Fruit fr=this.Fruit.get(i);
+				if (fr.getType()==1)
+				{
+					g2d.setColor(Color.CYAN);
+					int x=(int)(scale(fr.getPOS().x(),minX,maxX,50,850));
+					int y=(int)(scale(fr.getPOS().y(),minY,maxY,200,700));
+					//g2d.fillOval(x-7,y-7, 20, 20);
+					g2d.drawImage(apple,x-15,y-15,this);
+				}
+				if(fr.getType()==-1)
+				{
+					g2d.setColor(Color.GREEN);
+					int x=(int)(scale(fr.getPOS().x(),minX,maxX,50,850));
+					int y=(int)(scale(fr.getPOS().y(),minY,maxY,200,700));
+					//g2d.fillOval(x-7,y-7, 20, 20);
+					g2d.drawImage(banana,x-15,y-15,this);
+				}
+			}
+		}
+		private void paintRobot(Graphics2D g2d)
+		{
+			ArrayList<Robot> robots=this.Robots;
+			List<String> rob = game.getRobots();
+	        for (int i = 1; i <= rob.size(); i++) {
+	            g2d.drawString(rob.get(i - 1), 150, 70 + (20 * i));
+	        }
+			
+			for (int i=0 ;i<robots.size();i++)
+			{
+				Robot r=robots.get(i);
+				int x=(int)(scale(r.getpos().x(),minX,maxX,50,850));
+				int y=(int)(scale(r.getpos().y(),minY,maxY,200,700));
+				//g2d.setColor(Color.BLACK);
+				//g2d.drawOval(x-15,y-15, 30, 30);
+		        g2d.drawImage(robot,x-15,y-15,this);
+
+				//g2d.setFont(new Font("Arial", Font.BOLD, 100));
+			}
+			
 		}
 		private void min_max()
 		{
@@ -257,13 +278,13 @@ public static final double Epsilon=0.0001;
 		{
 			game.startGame();
 			int index=0;
-			long time=50;
+			long time=150;
 			while(game.isRunning()) {
 				
 				moveRobots(game, gg,graph);
 				
 				try {
-					if(index%2==0) {this.repaint();}
+					this.repaint();
 					
 						Thread.sleep(time);
 						index++;				
