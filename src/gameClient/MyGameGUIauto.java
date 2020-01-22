@@ -53,6 +53,7 @@ public static DGraph graph;
 public static Graph_Algo gg ;
 double maxX=0,maxY=0,minX=0,minY=0;
 public static long time;
+public static long df;
 public static final double Epsilon=0.0001;
 
 	
@@ -75,6 +76,7 @@ public static final double Epsilon=0.0001;
 		min_max();
 		JSONObject line;
 		String info = game.toString();
+		
 
 		try {
 			line = new JSONObject(info);
@@ -257,15 +259,19 @@ public static final double Epsilon=0.0001;
 		{
 			game.startGame();
 			int index=0;
-			long time=50;
+			long time=110;
+			
 			while(game.isRunning()) {
-				
+				df=110;
 				moveRobots(game, gg,graph);
 				
 				try {
-					if(index%2==0) {this.repaint();}
-					
-						Thread.sleep(time);
+					if(index%1==0) {this.repaint();}
+					if(df<time) { 
+						System.out.println(df+"fg");
+					Thread.sleep(df);}
+					else {Thread.sleep(time);}
+						
 						index++;				
 			} 
 				catch (InterruptedException e) {e.printStackTrace();}	
@@ -320,22 +326,81 @@ public static final double Epsilon=0.0001;
 				String s=f_iter.next();
 					Ban.init(s);
 						Fruit.add(Ban);
-							System.out.println(s);
+						//	System.out.println(s);
 						}
 			fruit12=new LinkedList<Fruit>(Fruit);
 			int dest=0;
 			for(Robot r:Robots) {
+				
 				if(r.getdest()==-1) {
 					dest=nextNode(graph,gg,r);
-					
+					Robots.get(r.getid()).addint(dest);
 					System.out.println(dest);
+				
+					if(dest!=-1) {
+						System.out.println(Robots.get(r.getid()).arr.size()+"sdds");
+						if(Robots.get(r.getid()).arr.size()==6 ) {
+						if(Robots.get(r.getid()).isStucked()) {
+						System.out.println(Robots.get(r.getid()).isStucked());
+							Iterator<edge_data> a=graph.getE(r.getid()).iterator();
+							while(a.hasNext()) {
+								edge_data edge=a.next();
+								if(dest!=edge.getDest()) dest=edge.getDest();
+								
+							}
+							Robots.get(r.getid()).initarr();
+						}else {
+							System.out.println(Robots.get(r.getid()).isStucked());
+							Robots.get(r.getid()).initarr();
+							
+						}
+						
+					}
 					game.chooseNextEdge(r.getid(), dest);
+					//System.out.println(r.getFruit().getValue()+"+");
 					System.out.println("Turn to node: "+dest+"  time to end:"+(t/1000));
+					}
 					
 					
 				}
+		
 			}
+			double de,drf;
+			long dd;
+			for(Robot re :Robots) {
+				if(re.getFruit()!=null && Fruit.contains(re.getFruit())) {
+				EdgeData edge =GetFE(graph,re.getFruit());
+				if(re.getdest()!=-1) {
+					if(re.getdest()==edge.getDest()) {
+						if(re.getsrc()==edge.getSrc()) {
+						Point3D p1 , p2;
+						p1=graph.getNode(edge.getSrc()).getLocation();
+						p2=graph.getNode(edge.getDest()).getLocation();
+				        de=Delta(p1,p2);
+						 drf=Delta(re.getpos(),re.getFruit().getPOS());
+					 dd=(long) (((drf/de)*edge.getWeight())/re.getSpeed());
+						if(dd<df  ) df=dd;
+						}	
+						
+					}/*else {
+						Point3D p1 , p2;
+						p1=graph.getNode(re.getsrc()).getLocation();
+						p2=graph.getNode(re.getdest()).getLocation();
+				         de=Delta(p1,p2);
+						 drf=Delta(re.getpos(),re.getFruit().getPOS());
+						 dd=(long) (((drf/de)*edge.getWeight())/re.getSpeed());
+						if(dd<df) df=dd;
+						
+					}
+				*/
+					
+					
+				}
 				
+				
+				
+			}
+			}	
 			
 		}
 	}
@@ -383,19 +448,36 @@ public static final double Epsilon=0.0001;
 	public static int nextNode(DGraph g, Graph_Algo gg,Robot robot) {
 		List<node_data> path=new LinkedList<node_data>();
 		EdgeData fruitedg=null;
-		if(robot.getFruit()!=null&& Fruit.contains(robot.getFruit()))// and fruits contat robot fruit 
+		double de,drf;
+		long dd;
+		if(robot.getFruit()!=null && Fruit.contains(robot.getFruit()))// and fruits contat robot fruit 
 			{
 			fruitedg=GetFE(g,robot.getFruit());
 		if(robot.getsrc()==fruitedg.getSrc() ) {
-			
-			if(g.getEdge(robot.getsrc(),fruitedg.getDest())==null) throw new RuntimeException ("there is no edge between src and dest"+robot.getsrc()+" "+fruitedg.getDest());
-	
-	
+			Point3D p1 , p2;
+			p1=g.getNode(fruitedg.getSrc()).getLocation();
+			p2=g.getNode(fruitedg.getDest()).getLocation();
+	       de=Delta(p1,p2);
+			 drf=Delta(robot.getpos(),robot.getFruit().getPOS());
+			dd=(long) (((drf/de)*fruitedg.getWeight())/robot.getSpeed());
+			if(dd<df ) df=dd;
+			//Robots.get(robot.getid()).SetFruit(null);
 			return fruitedg.getDest();
 		}else {
-			path=gg.shortestPath(robot.getsrc(), fruitedg.getSrc());
-		
-		return path.get(1).getKey();
+			path=gg.shortestPath(robot.getsrc(), fruitedg.getSrc());	
+			node_data dest=new node();
+			dest=path.get(1);
+			/*
+			Point3D p1 , p2;
+			p1=robot.getpos();
+			p2=dest.getLocation();
+	        double de=Delta(p1,p2);
+		//	double drf=Delta(robot.getpos(),robot.getFruit().getPOS());
+	        double edgeweight=g.getEdge(robot.getsrc(), dest.getKey()).getWeight();
+			long dd=(long) (((de)*edgeweight)/robot.getSpeed());
+			if(dd<df) df=dd;
+			*/
+		return dest.getKey();
 		}
 		}
 		
@@ -404,9 +486,9 @@ public static final double Epsilon=0.0001;
 		double pathcm = 0;
 		EdgeData FG =null ;
 		
-		if(fruit12==null) {
-			fruit12=new LinkedList<Fruit>(Fruit);
-		}
+		if(fruit12!=null) {
+			
+		
 		for(Fruit f: fruit12) {
 			
 			fruitedg=GetFE(g,f);
@@ -422,14 +504,34 @@ public static final double Epsilon=0.0001;
 			
 		}	
 		fruit12.remove(robot.getFruit());	
-		if(robot.getsrc() == FG.getSrc()) return FG.getDest();
+		if(robot.getsrc() == FG.getSrc()) {
+		//	Robots.get(robot.getid()).SetFruit(null);
+			Point3D p1 , p2;
+			p1=g.getNode(FG.getSrc()).getLocation();
+			p2=g.getNode(FG.getDest()).getLocation();
+	        de=Delta(p1,p2);
+			 drf=Delta(robot.getpos(),robot.getFruit().getPOS());
+			 dd=(long) (((drf/de)*FG.getWeight())/robot.getSpeed());
+			if(dd<df ) df=dd;
+			//Robots.get(robot.getid()).SetFruit(null);
+			
+			return FG.getDest();
+		}
 		path=gg.shortestPath(robot.getsrc(), FG.getSrc());
 
 		if(path.size()!=0) {
 			return path.get(1).getKey();
 		}
-		return FG.getSrc();
+		}
+		return (-1);
 
+	}
+	public static double Delta(Point3D p1,Point3D p2) {
+		double delta=0;
+	double dx=	Math.pow((p1.x()-p2.x()),2);
+	double dy=Math.pow((p1.y()-p2.y()),2);
+	delta=Math.sqrt((dx+dy));
+		return delta;
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {

@@ -1,12 +1,14 @@
 package dataStructure;
 
+import java.util.ArrayList;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import utils.Point3D;
 
 public class Robot {
-	
+	public  ArrayList<Integer> arr=new ArrayList<Integer>();
 	int src;
 	Point3D pos;
 	int id;
@@ -56,6 +58,7 @@ public class Robot {
 			this.id = ttt.getInt("id");
 			this.src = ttt.getInt("src");
 			this.dest = ttt.getInt("dest");
+			this.speed=ttt.getDouble("speed");
 			Point3D p=new Point3D(ttt.getString("pos"));
 			this.pos=p;
 		 }catch(JSONException e) {e.printStackTrace();
@@ -106,5 +109,23 @@ public class Robot {
 	public double getvalue()
 	{
 		return this.value;
+	}
+	public double getSpeed() {
+		return this.speed;
+	}
+	public boolean isStucked() {
+		int numofsrc=0,numofdest=0;
+		for(int i=0;i<arr.size();i++) {
+		if(arr.get(i)==arr.get(0)) numofsrc++;
+		if(arr.get(i)==arr.get(1)) numofdest++;
+	}
+		if(numofsrc==numofdest) return true;
+		return false;
+	}
+	public void initarr() {
+		this.arr=new ArrayList<Integer>();
+	}
+	public void addint(int a) {
+		arr.add(a);
 	}
 }
