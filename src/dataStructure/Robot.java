@@ -119,7 +119,7 @@ public class Robot {
 		if(arr.get(i)==arr.get(0)) numofsrc++;
 		if(arr.get(i)==arr.get(1)) numofdest++;
 	}
-		if(numofsrc==numofdest) return true;
+		if(numofsrc==numofdest && numofsrc==3) return true;
 		return false;
 	}
 	public void initarr() {

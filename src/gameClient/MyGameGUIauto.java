@@ -13,6 +13,7 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.Shape;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -55,25 +56,41 @@ double maxX=0,maxY=0,minX=0,minY=0;
 public static long time;
 public static long df;
 public static final double Epsilon=0.0001;
-
+private Image img,robot,apple,banana;
+private int hight=900;
+private int width=900;
+private static  Logger_KML kml;
+private int scenario;
+private int id;
 	
 	public MyGameGUIauto()  {
 		this.setTitle("The Maza Of Waze");
-		this.setSize(900, 900);
+		this.setSize(width, hight);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		img = Toolkit.getDefaultToolkit().createImage("11.jpg");
+		robot = Toolkit.getDefaultToolkit().createImage("Robot.png");
+		apple = Toolkit.getDefaultToolkit().createImage("apple.png");
+		banana = Toolkit.getDefaultToolkit().createImage("banana.png");
+		String ID= JOptionPane.showInputDialog(this,"Please insert your ID");
+		id =Integer.parseInt(ID);
 		String level= JOptionPane.showInputDialog(this,"Please insert Level between [0,23]");
-		int scenario =Integer.parseInt(level);
+		scenario =Integer.parseInt(level);
 		
 		if (scenario<=23&&scenario>=0)
+		{
+			Game_Server.login(id);
 			 game = Game_Server.getServer(scenario); // you have [0,23] games
-		else 
+		}else {
+			Game_Server.login(id);
 			game=Game_Server.getServer(0);
+		}
 		String g = game.getGraph();
 		gg = new Graph_Algo();
 		graph=new DGraph();
 		graph.init(g);
 		gg.init(g);
 		min_max();
+		kml=new Logger_KML(scenario);
 		JSONObject line;
 		String info = game.toString();
 		
@@ -92,7 +109,7 @@ public static final double Epsilon=0.0001;
 				String s=f_iter.next();
 					f.init(s);
 						this.Fruit.add(f);
-							System.out.println(s);
+							//System.out.println(s);
 						}
 			
 
@@ -131,7 +148,8 @@ public static final double Epsilon=0.0001;
 				super.paint(g);
 		        Graphics2D g2d = (Graphics2D) g;
 		        g2d.setBackground(new Color(240, 240, 240));
-		      
+		        g2d.drawImage(img,0,0,this);
+
 		        
 				Collection<node_data> node=graph.getV();
 				Iterator<node_data> nodes=node.iterator();
@@ -146,7 +164,7 @@ public static final double Epsilon=0.0001;
 						double y_=scale(n.getLocation().y(),minY,maxY,200,700); 
 						Point3D p_=new Point3D(x_, y_);
 						g2d.fillOval(p_.ix(), p_.iy(), 10, 10);
-						g2d.setFont(new Font("deafult", Font.BOLD,14));	
+						g2d.setFont(new Font("deafult", Font.BOLD,20));	
 						g2d.setColor(Color.BLUE);
 						String key=n.getKey()+"";
 						
@@ -165,68 +183,77 @@ public static final double Epsilon=0.0001;
 							double y1=scale(graph.getNode(s.getDest()).getLocation().y(),minY,maxY,200,700); 
 							Point3D p2=new Point3D(x1, y1);
 							g2d.setColor(Color.RED);
-							g2d.setFont(new Font("deafult", Font.BOLD,14));
-							String weight = s.getWeight() + "";
-							
 							g2d.drawLine(p.ix(), p.iy(), p2.ix(), p2.iy());
-													
-							g2d.setColor(Color.YELLOW);
+							g2d.setFont(new Font("deafult", Font.BOLD,20));
+							
+							//String weight = s.getWeight() + "";
+							
+                            
+							
+                            g2d.setColor(Color.YELLOW);
 							int x2=(int) ((0.8*p2.ix())+ (0.2*p.ix()));
 							int y2 =(int)((0.8*p2.iy())+ (0.2*p.iy()));
 							g2d.fillOval(x2-5,y2-5,10,10);
-							
-							
 						}
 						
 						}
 					
-					
-					for (int i=0 ;i<this.Fruit.size();i++)
-						{
-					
-							Fruit fr=this.Fruit.get(i);
-							if (fr.getType()==1)
-							{
-								g2d.setColor(Color.CYAN);
-								int x=(int)(scale(fr.getPOS().x(),minX,maxX,50,850));
-								int y=(int)(scale(fr.getPOS().y(),minY,maxY,200,700));
-								g2d.fillOval(x-7,y-7, 20, 20);
-							}
-							if(fr.getType()==-1)
-							{
-								g2d.setColor(Color.GREEN);
-								int x=(int)(scale(fr.getPOS().x(),minX,maxX,50,850));
-								int y=(int)(scale(fr.getPOS().y(),minY,maxY,200,700));
-								g2d.fillOval(x-7,y-7, 20, 20);
-							}
-						}
-					ArrayList<Robot> robots=this.Robots;
-					List<String> rob = game.getRobots();
-			        for (int i = 1; i <= rob.size(); i++) {
-			            g2d.drawString(rob.get(i - 1), 150, 70 + (20 * i));
-			        }
-					
-					for (int i=0 ;i<robots.size();i++)
-					{
-						Robot r=robots.get(i);
-						int x=(int)(scale(r.getpos().x(),minX,maxX,50,850));
-						int y=(int)(scale(r.getpos().y(),minY,maxY,200,700));
-						g2d.setColor(Color.BLACK);
-						g2d.drawOval(x-15,y-15, 30, 30);
-						 g2d.setFont(new Font("Arial", Font.BOLD, 15));
-					}
-					
-					
 					time=game.timeToEnd()/1000;
 					g2d.setColor(Color.BLACK);
 					g2d.setFont(new Font("Arial", Font.BOLD, 20));
-					 g2d.drawString("Time left: " + (this.time ), 50, 150);
+					g2d.drawString("Time left: " + (this.time ), 50, 150);
 					
 					g2d.setColor(Color.RED);
 					g2d.setFont(new Font("Arial", Font.BOLD, 20));
-					g2d.drawString(game.toString(), 50, 50);
+					g2d.drawString(game.toString(), 20, 50);
 					
+					paintfruit(g2d);
+					paintRobot(g2d);
 			      
+		}
+		private void paintfruit(Graphics2D g2d)
+		{
+			for (int i=0 ;i<this.Fruit.size();i++)
+			{
+		
+				Fruit fr=this.Fruit.get(i);
+				if (fr.getType()==1)
+				{
+					g2d.setColor(Color.CYAN);
+					int x=(int)(scale(fr.getPOS().x(),minX,maxX,50,850));
+					int y=(int)(scale(fr.getPOS().y(),minY,maxY,200,700));
+					//g2d.fillOval(x-7,y-7, 20, 20);
+					g2d.drawImage(apple,x-15,y-15,this);
+				}
+				if(fr.getType()==-1)
+				{
+					g2d.setColor(Color.GREEN);
+					int x=(int)(scale(fr.getPOS().x(),minX,maxX,50,850));
+					int y=(int)(scale(fr.getPOS().y(),minY,maxY,200,700));
+					//g2d.fillOval(x-7,y-7, 20, 20);
+					g2d.drawImage(banana,x-15,y-15,this);
+				}
+			}
+		}
+		private void paintRobot(Graphics2D g2d)
+		{
+			ArrayList<Robot> robots=this.Robots;
+			List<String> rob = game.getRobots();
+	        for (int i = 1; i <= rob.size(); i++) {
+	        g2d.drawString(rob.get(i - 1), 20, 90);
+	     }
+			
+	     for (int i=0 ;i<robots.size();i++)
+			{
+				Robot r=robots.get(i);
+       			int x=(int)(scale(r.getpos().x(),minX,maxX,50,850));
+				int y=(int)(scale(r.getpos().y(),minY,maxY,200,700));
+		        g2d.drawImage(robot,x-15,y-15,this);
+		        //g2d.setColor(Color.BLACK);
+				//g2d.drawOval(x-15,y-15, 30, 30);
+				//g2d.setFont(new Font("Arial", Font.BOLD, 100));
+			}
+			
 		}
 		private void min_max()
 		{
@@ -258,27 +285,42 @@ public static final double Epsilon=0.0001;
 		public void run()
 		{
 			game.startGame();
+
 			int index=0;
-			long time=110;
+			long time=120;
 			
+
+			int ind=0;
+
+			int jj = 0;
+
 			while(game.isRunning()) {
-				df=110;
+				df=120;
 				moveRobots(game, gg,graph);
 				
 				try {
+
 					if(index%1==0) {this.repaint();}
+					/*
 					if(df<time) { 
 						System.out.println(df+"fg");
 					Thread.sleep(df);}
-					else {Thread.sleep(time);}
+					*/
+					Thread.sleep(time);
 						
 						index++;				
+
 			} 
 				catch (InterruptedException e) {e.printStackTrace();}	
 			}
-		
+			kml.endKml(scenario);
+			String remark=kml.getString();
+			game.sendKML(remark);
+			//System.out.println(game.sendKML(remark));
 			String results = game.toString();
 			System.out.println("Game Over: "+results);
+			this.setVisible(false);
+			this.setDefaultCloseOperation(0);
 		}
 		
 		
@@ -300,28 +342,30 @@ public static final double Epsilon=0.0001;
 	
 	public static void moveRobots(game_service game,  Graph_Algo gg ,DGraph graph) {
 		List<String> log = game.move();
-		if(log!=null) {
-			long t = game.timeToEnd();
-			for(int i=0;i<log.size();i++) {
+		long t = game.timeToEnd();
+		if(log!=null)
+		{
+			
+			for(int i=0;i<log.size();i++)
+			{
+			
+			
 				String robot_json = log.get(i);
 				Robot demo=new Robot(robot_json);
-				for (Robot r : Robots) {
-					if(r.getid()==demo.getid()) {
-			Robots.get(r.getid()).init(robot_json);
+				for (Robot r : Robots) 
+				{
+					if(r.getid()==demo.getid()) 
+					{
+						Robots.get(r.getid()).init(robot_json);
 					}
-		
-
-		
 				}
 				
 			}
-			
-			
-			
+		}
 			Iterator<String> f_iter = game.getFruits().iterator();
-			
 			Fruit=new ArrayList<Fruit>();
-			while(f_iter.hasNext()) {
+			while(f_iter.hasNext())
+			{
 				Fruit Ban=new Fruit();
 				String s=f_iter.next();
 					Ban.init(s);
@@ -342,10 +386,15 @@ public static final double Epsilon=0.0001;
 						if(Robots.get(r.getid()).arr.size()==6 ) {
 						if(Robots.get(r.getid()).isStucked()) {
 						System.out.println(Robots.get(r.getid()).isStucked());
-							Iterator<edge_data> a=graph.getE(r.getid()).iterator();
+							Iterator<edge_data> a=graph.getE(r.getsrc()).iterator();
 							while(a.hasNext()) {
 								edge_data edge=a.next();
-								if(dest!=edge.getDest()) dest=edge.getDest();
+								if(dest!=edge.getDest())
+									{
+									System.out.println(edge.getDest()+"sde");
+									dest=edge.getDest();
+									System.out.println(dest+"sde");
+									}
 								
 							}
 							Robots.get(r.getid()).initarr();
@@ -354,17 +403,20 @@ public static final double Epsilon=0.0001;
 							Robots.get(r.getid()).initarr();
 							
 						}
-						
+						System.out.println(dest+"jowa");
 					}
+						System.out.println(dest);
 					game.chooseNextEdge(r.getid(), dest);
 					//System.out.println(r.getFruit().getValue()+"+");
+					kml.placemark(r.getpos(), r.getid());
 					System.out.println("Turn to node: "+dest+"  time to end:"+(t/1000));
 					}
 					
 					
 				}
-		
 			}
+
+
 			double de,drf;
 			long dd;
 			for(Robot re :Robots) {
@@ -399,10 +451,10 @@ public static final double Epsilon=0.0001;
 				
 				
 				
-			}
-			}	
 			
-		}
+			}	
+			}
+		
 	}
 
 	public static EdgeData GetFE(DGraph graph,Fruit f) {
@@ -450,7 +502,7 @@ public static final double Epsilon=0.0001;
 		EdgeData fruitedg=null;
 		double de,drf;
 		long dd;
-		if(robot.getFruit()!=null && Fruit.contains(robot.getFruit()))// and fruits contat robot fruit 
+		if(robot.getFruit()!=null )// and fruits contat robot fruit 
 			{
 			fruitedg=GetFE(g,robot.getFruit());
 		if(robot.getsrc()==fruitedg.getSrc() ) {
@@ -461,7 +513,8 @@ public static final double Epsilon=0.0001;
 			 drf=Delta(robot.getpos(),robot.getFruit().getPOS());
 			dd=(long) (((drf/de)*fruitedg.getWeight())/robot.getSpeed());
 			if(dd<df ) df=dd;
-			//Robots.get(robot.getid()).SetFruit(null);
+			Robots.get(robot.getid()).SetFruit(null);
+			System.out.println(fruitedg.getDest()+"ff");
 			return fruitedg.getDest();
 		}else {
 			path=gg.shortestPath(robot.getsrc(), fruitedg.getSrc());	
@@ -477,6 +530,7 @@ public static final double Epsilon=0.0001;
 			long dd=(long) (((de)*edgeweight)/robot.getSpeed());
 			if(dd<df) df=dd;
 			*/
+			System.out.println(dest.getKey()+"sf");
 		return dest.getKey();
 		}
 		}
@@ -484,28 +538,28 @@ public static final double Epsilon=0.0001;
 
 		double cmp=Double.MAX_VALUE;
 		double pathcm = 0;
-		EdgeData FG =null ;
+		EdgeData FG =null;
 		
-		if(fruit12!=null) {
+		if(Fruit!=null) {
 			
 		
-		for(Fruit f: fruit12) {
+		for(Fruit f: Fruit) {
 			
 			fruitedg=GetFE(g,f);
-			
+			pathcm=gg.shortestPathDist(robot.getsrc(), fruitedg.getDest());
 
 			if(pathcm<cmp){
 				Fruit ag=new Fruit(f);
 				cmp=pathcm;
-				robot.SetFruit(ag);
+				Robots.get(robot.getid()).SetFruit(ag);
 				 FG=new EdgeData(fruitedg);
 			}
 			
 			
 		}	
-		fruit12.remove(robot.getFruit());	
+		Fruit.remove(robot.getFruit());	
 		if(robot.getsrc() == FG.getSrc()) {
-		//	Robots.get(robot.getid()).SetFruit(null);
+			//Robots.get(robot.getid()).SetFruit(null);
 			Point3D p1 , p2;
 			p1=g.getNode(FG.getSrc()).getLocation();
 			p2=g.getNode(FG.getDest()).getLocation();
@@ -513,16 +567,18 @@ public static final double Epsilon=0.0001;
 			 drf=Delta(robot.getpos(),robot.getFruit().getPOS());
 			 dd=(long) (((drf/de)*FG.getWeight())/robot.getSpeed());
 			if(dd<df ) df=dd;
-			//Robots.get(robot.getid()).SetFruit(null);
-			
+			Robots.get(robot.getid()).SetFruit(null);
+			System.out.println(FG.getDest()+"ls");
 			return FG.getDest();
 		}
 		path=gg.shortestPath(robot.getsrc(), FG.getSrc());
 
 		if(path.size()!=0) {
+			System.out.println(path.get(1).getKey()+" : ");
 			return path.get(1).getKey();
 		}
 		}
+		System.out.println("asd");
 		return (-1);
 
 	}
