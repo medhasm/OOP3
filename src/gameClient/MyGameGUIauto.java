@@ -491,11 +491,11 @@ private Graphics mBuffer_graphics;
 	    	   }
 	       }
 	        robot.setpath(path);
-	        t=200;
+	        t=125;
 	       if(!path.isEmpty())
 	       {	
 	    	   if(path.size()==1)
-	    		   t=100;
+	    		   t=105;
 	    	   node_data n = path.get(0);
 		        path.remove(0);
 		        robot.setpath(path);
