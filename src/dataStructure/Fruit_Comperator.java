@@ -11,8 +11,8 @@ public  class Fruit_Comperator implements Comparator<Fruit> {
 	@Override
 	public int compare(Fruit f1, Fruit f2) {
 		int res=0;
-    	if(f1.getValue()-f2.getValue()<0) return 1;
-    		else if(f1.getValue()-f2.getValue()>0) return -1;
+    	if(f1.getValue()-f2.getValue()<0) return -1;
+    		else if(f1.getValue()-f2.getValue()>0) return 1;
     	return 0;//there value are equal****
 	}
 }

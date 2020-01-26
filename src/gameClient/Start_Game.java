@@ -14,8 +14,6 @@ public class Start_Game extends Thread{
 	private int scenario;
 	int choose;
 	
-	
-	
 	public Start_Game()
 	{
 		JFrame jframe=new JFrame();

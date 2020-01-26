@@ -1,5 +1,9 @@
 package dataStructure;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -14,6 +18,9 @@ public class Robot {
 	double value;
 	double speed;
 	private Fruit RF =new Fruit();
+	public   LinkedList<node_data> path=new LinkedList<node_data>();
+	public  LinkedList<Integer> arr=new LinkedList<Integer>();
+
 	public  Robot(String JASON) {
 		 try {
 			JSONObject line = new JSONObject(JASON);
@@ -23,6 +30,7 @@ public class Robot {
 			this.dest = ttt.getInt("dest");
 			Point3D p=new Point3D(ttt.getString("pos"));
 			this.pos=p;
+			this.path=this.getpath();
 		 }catch(JSONException e) {e.printStackTrace();
 		 
 		 }
@@ -32,6 +40,8 @@ public class Robot {
 		this.id=id;
 		this.value=value;
 		this.RF=f;
+		this.path=this.getpath();
+
 	}
 	public Robot(int src, int id, Point3D pos, int dest, double value) 
 	{
@@ -40,6 +50,7 @@ public class Robot {
 		this.pos = pos;
 		this.dest = dest;
 		this.value = value;
+		this.path=this.getpath();
 	}
 	
 	public void SetFruit(Fruit f) {
@@ -58,6 +69,7 @@ public class Robot {
 			this.dest = ttt.getInt("dest");
 			Point3D p=new Point3D(ttt.getString("pos"));
 			this.pos=p;
+			this.path=this.getpath();
 		 }catch(JSONException e) {e.printStackTrace();
 		 
 		 }
@@ -107,4 +119,34 @@ public class Robot {
 	{
 		return this.value;
 	}
+	public LinkedList<node_data> getpath()
+	{
+		return this.path;
+	}
+	public void setpath(LinkedList<node_data> p)
+	{
+		this.path=p;
+	}
+	public boolean isStucked() {
+		int numofsrc=0,numofdest=0;
+		for(int i=0;i<arr.size();i++) {
+		if(arr.get(i)==arr.get(0)) numofsrc++;
+		if(arr.get(i)==arr.get(1)) numofdest++;
+	}
+		if(numofsrc==numofdest && numofsrc==3) return true;
+		return false;
+	}
+	public void initarr() {
+		this.arr=new LinkedList<Integer>();
+	}
+	public void addint(int a) {
+		if(arr.size()>6)
+			arr=new LinkedList<Integer>();
+		this.arr.addFirst(a);
+	}
+	public void arr()
+	{
+		System.out.println(this.arr);
+	}
 }
+

@@ -15,6 +15,8 @@ import utils.Point3D;
 		private double value ;
 		private int type;
 		private Point3D p;
+		public edge_data f_edge;
+		public boolean isused;
 	public Fruit() 
 	{
 			this.value=0.0;
@@ -69,6 +71,22 @@ import utils.Point3D;
 	{
 		return this.p;
 	}
-	
+	public edge_data getedge()
+	{
+		return f_edge;
+	}
+	public void setedge(edge_data edge)
+	{
+		this.f_edge=edge;
+	}
+	public void set_boolean(boolean b)
+	{
+		this.isused=b;
+	}
+	public boolean get_boolean()
+	{
+		return this.isused;
+	}
+
 	
 }

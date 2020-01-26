@@ -144,7 +144,7 @@ public class Ex4_Client implements Runnable{
 			JSONObject ttt = line.getJSONObject("GameServer");
 			int rs = ttt.getInt("robots");
 			System.out.println(info);
-			// the list of fruits should be considered in your solution
+			
 			Iterator<String> f_iter = game.getFruits().iterator();
 			while(f_iter.hasNext()) {System.out.println(f_iter.next());}	
 			int src_node = 0;  // arbitrary node, you should start at one of the fruits
