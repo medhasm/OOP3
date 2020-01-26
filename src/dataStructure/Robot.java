@@ -10,7 +10,7 @@ import org.json.JSONObject;
 import utils.Point3D;
 
 public class Robot {
-	
+	public  ArrayList<Integer> arr=new ArrayList<Integer>();
 	int src;
 	Point3D pos;
 	int id;
@@ -19,7 +19,6 @@ public class Robot {
 	double speed;
 	private Fruit RF =new Fruit();
 	public   LinkedList<node_data> path=new LinkedList<node_data>();
-	public  LinkedList<Integer> arr=new LinkedList<Integer>();
 
 	public  Robot(String JASON) {
 		 try {
@@ -67,6 +66,7 @@ public class Robot {
 			this.id = ttt.getInt("id");
 			this.src = ttt.getInt("src");
 			this.dest = ttt.getInt("dest");
+			this.speed=ttt.getDouble("speed");
 			Point3D p=new Point3D(ttt.getString("pos"));
 			this.pos=p;
 			this.path=this.getpath();
@@ -119,6 +119,7 @@ public class Robot {
 	{
 		return this.value;
 	}
+
 	public LinkedList<node_data> getpath()
 	{
 		return this.path;
@@ -126,6 +127,9 @@ public class Robot {
 	public void setpath(LinkedList<node_data> p)
 	{
 		this.path=p;
+	}
+	public double getSpeed() {
+		return this.speed;
 	}
 	public boolean isStucked() {
 		int numofsrc=0,numofdest=0;
@@ -136,17 +140,14 @@ public class Robot {
 		if(numofsrc==numofdest && numofsrc==3) return true;
 		return false;
 	}
-	public void initarr() {
-		this.arr=new LinkedList<Integer>();
-	}
-	public void addint(int a) {
-		if(arr.size()>6)
-			arr=new LinkedList<Integer>();
-		this.arr.addFirst(a);
-	}
 	public void arr()
 	{
 		System.out.println(this.arr);
+
+		this.arr=new ArrayList<Integer>();
+	}
+	public void addint(int a) {
+		arr.add(a);
 	}
 }
 

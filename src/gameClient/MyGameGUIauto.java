@@ -495,7 +495,7 @@ private Graphics mBuffer_graphics;
 	       if(!path.isEmpty())
 	       {	
 	    	   if(path.size()==1)
-	    		   t=105;
+	    		   t=125;
 	    	   node_data n = path.get(0);
 		        path.remove(0);
 		        robot.setpath(path);
