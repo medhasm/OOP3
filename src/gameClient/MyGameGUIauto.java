@@ -97,7 +97,7 @@ private Graphics mBuffer_graphics;
 		graph.init(g);
 		gg.init(g);
 		min_max();
-		t=150;
+		t=105;
 		kml=new Logger_KML(scenario);
 		JSONObject line;
 		String info = game.toString();
@@ -299,18 +299,17 @@ private Graphics mBuffer_graphics;
 			int ind=0;
 			long time=150;
 			int jj = 0;
+			
 			while(game.isRunning()) {
 			try {	
-				
-					
-					this.repaint();
 					moveRobots(game, gg,graph);
+					if(ind%1==0)this.repaint();
 					Thread.sleep(t);
-					ind++;
-					
-					jj++;				
+					jj++;
+					ind++;			
 			} 
-				catch (InterruptedException e) {e.printStackTrace();}	
+		catch (InterruptedException e) {e.printStackTrace();}	
+		
 			}
 			kml.endKml(scenario);
 			String remark=kml.getString();
@@ -469,8 +468,7 @@ private Graphics mBuffer_graphics;
 	        			continue;
 	        		edge_data f_edge=Fruit.get(f).getedge();
 	        		Fruit.get(f).set_boolean(true);
-	        		double p=(gg.shortestPathDist(robot.getsrc(), f_edge.getSrc())+(f_edge.getWeight()));
-	        				//Fruit.get(f).getValue();
+	        		double p=(gg.shortestPathDist(robot.getsrc(), f_edge.getSrc())+(f_edge.getWeight()));//Fruit.get(f).getValue();
 	        		
 	        		if(min_path>p)
 	        		{
@@ -481,9 +479,10 @@ private Graphics mBuffer_graphics;
 	        				path.add(g.getNode(Fruit.get(f).getedge().getDest()));	
 	        		}  
 	        }
-	      }
+	     }
 	       for(int i=0;i<path.size();i++)
 	       {
+	    	   
 	    	   node_data n=path.get(i);
 	    	   if(n.getKey()==robot.getsrc())
 	    	   {
@@ -491,11 +490,11 @@ private Graphics mBuffer_graphics;
 	    	   }
 	       }
 	        robot.setpath(path);
-	        t=125;
+	        t=110;
 	       if(!path.isEmpty())
 	       {	
 	    	   if(path.size()==1)
-	    		   t=125;
+	    		   t=140;
 	    	   node_data n = path.get(0);
 		        path.remove(0);
 		        robot.setpath(path);
