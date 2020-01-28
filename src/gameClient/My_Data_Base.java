@@ -84,13 +84,13 @@ public class My_Data_Base {
      * @param id
      * @return
      */
-    public static TreeMap<Integer, String> myBestResults(int id) {
+    public static HashMap<Integer, String> myBestResults(int id) {
         String query = "SELECT * FROM Logs as logs inner join (" + "SELECT max(score) as score, levelID FROM Logs"
                 + " where userID = " + id + " group by levelID" + ") as groupedLogs"
                 + " on logs.levelID = groupedLogs.levelID and logs.score = groupedLogs.score" + " where userID = " + id
                 + " order by logs.levelID asc";
         ResultSet resultSet = doQuery(query);
-        TreeMap<Integer, String> tp = new TreeMap<Integer, String>();
+        HashMap<Integer, String> tp = new HashMap<Integer, String>();
         try {
 
             while (resultSet.next()) {
@@ -111,18 +111,14 @@ public class My_Data_Base {
      * @param id
      * @return
      */
-    public static TreeMap<String, String> gameBestResults() {
-        String query = "SELECT * FROM Logs as logs inner join ("
-                + "SELECT max(score) as score, levelID, userID FROM Logs" + "	group by levelID,userID"
-                + ") as groupedLogs"
-                + " on logs.userID = groupedLogs.userID and logs.levelID = groupedLogs.levelID and logs.score = groupedLogs.score"
-                + " order by logs.userID desc,logs.levelID asc";
+    public static HashMap<String, String> gameBestResults() {
+        String query = "SELECT * FROM Users;";
         ResultSet resultSet = doQuery(query);
-        TreeMap<String, String> tp = new TreeMap<String, String>();
+       HashMap<String, String> tp = new HashMap<String, String>();
         try {
 
             while (resultSet.next()) {
-                String value = "" + resultSet.getInt("userID") + "," + resultSet.getInt("levelID") + ","
+                String value = "" + resultSet.getInt("userID\n") + "," + resultSet.getInt("levelID") + ","
                         + resultSet.getInt("score") + "," + resultSet.getInt("moves") + "," + resultSet.getDate("time");
                 tp.put(resultSet.getInt("userID") + "," + resultSet.getInt("levelID"), value);
             }
@@ -135,10 +131,10 @@ public class My_Data_Base {
     public static void main(String[] args) {
 		My_Data_Base db=new My_Data_Base();
 		int x=db.gamesPlayed(206953127);
-		TreeMap<Integer, String> n=db.myBestResults(206953127);
-		TreeMap<String, String> b=db.gameBestResults();
-		System.out.println(b);
-		//System.out.println(x);
-		//System.out.println(n);
+		HashMap<Integer, String> n=db.myBestResults(206953127);
+		//HashMap<String, String> b=db.gameBestResults();
+		//System.out.println(b.get(206953127));
+		System.out.println(x);
+		System.out.println(n);
 	}
 }

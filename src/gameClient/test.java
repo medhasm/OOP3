@@ -16,6 +16,14 @@ public static void main(String[] args) {
 	System.out.println(lst);
 	//int x= (int)(Math.random()*10);
 	//System.out.println(x);
-	
+	for(int i=0;i<5;i++)
+	{
+		if(i==3)
+			continue;
+		
+		System.out.println(i);
+		if(i==4)
+			System.out.println("hii");
+	}
 }
 }

@@ -24,9 +24,7 @@ public class SimpleDB {
 			int level = 3;
 			allUsers();
 			printLog();
-			String kml = getKML(id1,level);
-			System.out.println("***** KML file example: ******");
-			System.out.println(kml);
+			
 		}
 	/** simply prints all the games as played by the users (in the database).
 	 * 
