@@ -12,7 +12,11 @@
     </Style>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:55:57.406</when>
+=======
         <when>2020-01-23T02:09:36.937</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -21,7 +25,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:55:58.872</when>
+=======
         <when>2020-01-23T02:09:38.423</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -30,42 +38,61 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:00.771</when>
+=======
         <when>2020-01-23T02:09:40.109</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
-        <coordinates>35.20746249717514,32.10254648739496,0.0</coordinates>
+        <coordinates>35.19597880064568,32.10154696638656,0.0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:01.809</when>
+=======
         <when>2020-01-23T02:09:41.163</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
-        <coordinates>35.20792948668281,32.10470908739496,0.0</coordinates>
+        <coordinates>35.18910131880549,32.103618700840336,0.0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:03.052</when>
+=======
         <when>2020-01-23T02:09:42.852</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
-        <coordinates>35.20582803389831,32.10625380168067,0.0</coordinates>
+        <coordinates>35.18753053591606,32.10378225882353,0.0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:04.501</when>
+=======
         <when>2020-01-23T02:09:44.329</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
-        <coordinates>35.2016888087167,32.10601755126051,0.0</coordinates>
+        <coordinates>35.18958953510896,32.10785303529412,0.0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:06.294</when>
+=======
         <when>2020-01-23T02:09:44.330</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
@@ -76,15 +103,7 @@
     <Placemark>
       <TimeStamp>
         <when>2020-01-23T02:09:45.913</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:09:47.089</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -93,88 +112,165 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:07.532</when>
+=======
+        <when>2020-01-23T02:09:47.089</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:08.989</when>
+=======
         <when>2020-01-23T02:09:48.249</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.2016888087167,32.10601755126051,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:10.557</when>
+=======
+        <when>2020-01-23T02:09:49.199</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:11.119</when>
+=======
+        <when>2020-01-23T02:09:49.937</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:12.046</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.18958953510896,32.10785303529412,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:09:49.199</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.18753053591606,32.10378225882353,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:09:49.937</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.18910131880549,32.103618700840336,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
+=======
         <when>2020-01-23T02:09:50.043</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.18910131880549,32.103618700840336,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:13.058</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18753053591606,32.10378225882353,0.0</coordinates>
+=======
         <when>2020-01-23T02:09:50.677</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.19597880064568,32.10154696638656,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:13.843</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18958953510896,32.10785303529412,0.0</coordinates>
+=======
         <when>2020-01-23T02:09:51.416</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.20319591121872,32.1031462,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:14.296</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18753053591606,32.10378225882353,0.0</coordinates>
+=======
         <when>2020-01-23T02:09:52.259</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.20746249717514,32.10254648739496,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:14.606</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18958953510896,32.10785303529412,0.0</coordinates>
+=======
         <when>2020-01-23T02:09:52.786</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.20792948668281,32.10470908739496,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:15.021</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
+=======
         <when>2020-01-23T02:09:53.630</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.20582803389831,32.10625380168067,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:15.358</when>
+=======
         <when>2020-01-23T02:09:53.736</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -183,7 +279,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:15.696</when>
+=======
         <when>2020-01-23T02:09:54.475</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -192,7 +292,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:16.031</when>
+=======
         <when>2020-01-23T02:09:54.792</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -201,7 +305,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:16.255</when>
+=======
         <when>2020-01-23T02:09:55.108</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -210,7 +318,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:16.663</when>
+=======
         <when>2020-01-23T02:09:55.530</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -219,7 +331,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:17.114</when>
+=======
         <when>2020-01-23T02:09:55.951</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -228,7 +344,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:17.450</when>
+=======
         <when>2020-01-23T02:09:56.268</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -237,115 +357,88 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:17.786</when>
+=======
         <when>2020-01-23T02:09:56.584</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.18753053591606,32.10378225882353,0.0</coordinates>
+<<<<<<< HEAD
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+        <when>2020-01-26T23:56:18.095</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18958953510896,32.10785303529412,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+        <when>2020-01-26T23:56:18.506</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+        <when>2020-01-26T23:56:18.822</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
+=======
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:19.157</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.2016888087167,32.10601755126051,0.0</coordinates>
+=======
         <when>2020-01-23T02:09:56.900</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.18958953510896,32.10785303529412,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:19.568</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.20582803389831,32.10625380168067,0.0</coordinates>
+=======
         <when>2020-01-23T02:09:57.321</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:19.904</when>
+=======
         <when>2020-01-23T02:09:57.638</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:09:57.954</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:09:58.376</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.18958953510896,32.10785303529412,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:09:58.799</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.18753053591606,32.10378225882353,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:09:59.116</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.18910131880549,32.103618700840336,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:09:59.432</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.19597880064568,32.10154696638656,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:09:59.750</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.20319591121872,32.1031462,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:00.173</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.20746249717514,32.10254648739496,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:00.278</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.20746249717514,32.10254648739496,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:00.490</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -354,7 +447,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:00.912</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:20.239</when>
+=======
+        <when>2020-01-23T02:09:57.954</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -363,7 +460,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:01.228</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:20.550</when>
+=======
+        <when>2020-01-23T02:09:58.376</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -372,7 +473,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:01.546</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:20.886</when>
+=======
+        <when>2020-01-23T02:09:58.799</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -381,7 +486,37 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:01.863</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:21.225</when>
+=======
+        <when>2020-01-23T02:09:59.116</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.2016888087167,32.10601755126051,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:21.564</when>
+=======
+        <when>2020-01-23T02:09:59.432</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:21.872</when>
+=======
+        <when>2020-01-23T02:09:59.750</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -390,16 +525,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:01.969</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:02.398</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:22.283</when>
+=======
+        <when>2020-01-23T02:10:00.173</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -408,16 +538,114 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:02.821</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:22.730</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.18753053591606,32.10378225882353,0.0</coordinates>
+=======
+        <when>2020-01-23T02:10:00.278</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.20746249717514,32.10254648739496,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:03.138</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:23.041</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18958953510896,32.10785303529412,0.0</coordinates>
+=======
+        <when>2020-01-23T02:10:00.490</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.20792948668281,32.10470908739496,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:23.461</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
+=======
+        <when>2020-01-23T02:10:00.912</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.20582803389831,32.10625380168067,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:23.797</when>
+=======
+        <when>2020-01-23T02:10:01.228</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.2016888087167,32.10601755126051,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:24.021</when>
+=======
+        <when>2020-01-23T02:10:01.546</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:24.432</when>
+=======
+        <when>2020-01-23T02:10:01.863</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:24.843</when>
+=======
+        <when>2020-01-23T02:10:01.969</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:25.150</when>
+=======
+        <when>2020-01-23T02:10:02.398</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -426,7 +654,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:03.455</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:25.458</when>
+=======
+        <when>2020-01-23T02:10:02.821</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -435,7 +667,37 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:25.794</when>
+=======
+        <when>2020-01-23T02:10:03.138</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.20319591121872,32.1031462,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:26.242</when>
+=======
+        <when>2020-01-23T02:10:03.455</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19597880064568,32.10154696638656,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:26.547</when>
+=======
         <when>2020-01-23T02:10:03.770</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -444,7 +706,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:26.886</when>
+=======
         <when>2020-01-23T02:10:03.876</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -453,7 +719,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:27.110</when>
+=======
         <when>2020-01-23T02:10:04.299</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -462,7 +732,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:27.523</when>
+=======
         <when>2020-01-23T02:10:04.511</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -471,7 +745,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:27.829</when>
+=======
         <when>2020-01-23T02:10:04.828</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -480,7 +758,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:28.163</when>
+=======
         <when>2020-01-23T02:10:05.145</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -489,7 +771,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:28.469</when>
+=======
         <when>2020-01-23T02:10:05.568</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -498,7 +784,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:28.915</when>
+=======
         <when>2020-01-23T02:10:05.779</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -507,7 +797,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:29.366</when>
+=======
         <when>2020-01-23T02:10:06.097</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -516,7 +810,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:29.701</when>
+=======
         <when>2020-01-23T02:10:06.413</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -525,6 +823,13 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:30.108</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18753053591606,32.10378225882353,0.0</coordinates>
+=======
         <when>2020-01-23T02:10:06.835</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
@@ -557,20 +862,33 @@
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:30.417</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18910131880549,32.103618700840336,0.0</coordinates>
+=======
         <when>2020-01-23T02:10:08.315</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.2016888087167,32.10601755126051,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:30.726</when>
+=======
         <when>2020-01-23T02:10:08.632</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -579,7 +897,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:31.064</when>
+=======
         <when>2020-01-23T02:10:08.948</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -588,6 +910,13 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:31.468</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19597880064568,32.10154696638656,0.0</coordinates>
+=======
         <when>2020-01-23T02:10:09.370</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
@@ -602,10 +931,18 @@
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.20792948668281,32.10470908739496,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:31.775</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18910131880549,32.103618700840336,0.0</coordinates>
+=======
         <when>2020-01-23T02:10:10.110</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
@@ -620,20 +957,33 @@
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.20792948668281,32.10470908739496,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:32.113</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18753053591606,32.10378225882353,0.0</coordinates>
+=======
         <when>2020-01-23T02:10:10.744</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.20746249717514,32.10254648739496,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:32.445</when>
+=======
         <when>2020-01-23T02:10:11.060</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -642,7 +992,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:32.850</when>
+=======
         <when>2020-01-23T02:10:11.482</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -651,7 +1005,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:33.164</when>
+=======
         <when>2020-01-23T02:10:11.799</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -660,7 +1018,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:33.476</when>
+=======
         <when>2020-01-23T02:10:12.222</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -669,7 +1031,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:33.784</when>
+=======
         <when>2020-01-23T02:10:12.539</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -678,7 +1044,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:34.118</when>
+=======
         <when>2020-01-23T02:10:12.961</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -687,7 +1057,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:34.346</when>
+=======
         <when>2020-01-23T02:10:13.172</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -696,7 +1070,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:34.681</when>
+=======
         <when>2020-01-23T02:10:13.488</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -705,7 +1083,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:34.987</when>
+=======
         <when>2020-01-23T02:10:13.805</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -714,7 +1096,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:35.322</when>
+=======
         <when>2020-01-23T02:10:13.910</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -723,7 +1109,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:35.552</when>
+=======
         <when>2020-01-23T02:10:14.334</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -732,7 +1122,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:35.965</when>
+=======
         <when>2020-01-23T02:10:14.651</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -741,7 +1135,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:36.415</when>
+=======
         <when>2020-01-23T02:10:15.072</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -750,7 +1148,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:36.753</when>
+=======
         <when>2020-01-23T02:10:15.390</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -759,7 +1161,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:37.162</when>
+=======
         <when>2020-01-23T02:10:15.812</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -768,7 +1174,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:37.465</when>
+=======
         <when>2020-01-23T02:10:16.128</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -777,7 +1187,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:37.774</when>
+=======
         <when>2020-01-23T02:10:16.445</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -786,7 +1200,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:38.112</when>
+=======
         <when>2020-01-23T02:10:16.763</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -795,7 +1213,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:38.527</when>
+=======
         <when>2020-01-23T02:10:17.184</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -804,7 +1226,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:38.767</when>
+=======
         <when>2020-01-23T02:10:17.395</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -813,6 +1239,9 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:39.179</when>
+=======
         <when>2020-01-23T02:10:17.818</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
@@ -823,6 +1252,7 @@
     <Placemark>
       <TimeStamp>
         <when>2020-01-23T02:10:17.924</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -831,7 +1261,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:39.517</when>
+=======
         <when>2020-01-23T02:10:18.240</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -840,7 +1274,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:39.859</when>
+=======
         <when>2020-01-23T02:10:18.556</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -849,7 +1287,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:40.169</when>
+=======
         <when>2020-01-23T02:10:18.873</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -858,7 +1300,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:40.618</when>
+=======
         <when>2020-01-23T02:10:19.294</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -867,7 +1313,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:41.020</when>
+=======
         <when>2020-01-23T02:10:19.717</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -876,7 +1326,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:41.360</when>
+=======
         <when>2020-01-23T02:10:20.034</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -885,7 +1339,98 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:41.670</when>
+=======
         <when>2020-01-23T02:10:20.350</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18753053591606,32.10378225882353,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:42.004</when>
+=======
+        <when>2020-01-23T02:10:20.666</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18958953510896,32.10785303529412,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:42.450</when>
+=======
+        <when>2020-01-23T02:10:21.088</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18753053591606,32.10378225882353,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:42.787</when>
+=======
+        <when>2020-01-23T02:10:21.298</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18958953510896,32.10785303529412,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:43.196</when>
+=======
+        <when>2020-01-23T02:10:21.720</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.20582803389831,32.10625380168067,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+        <when>2020-01-23T02:10:21.720</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18753053591606,32.10378225882353,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:43.530</when>
+=======
+        <when>2020-01-23T02:10:22.036</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18910131880549,32.103618700840336,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:43.836</when>
+=======
+        <when>2020-01-23T02:10:22.353</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -894,7 +1439,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:20.666</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:44.181</when>
+=======
+        <when>2020-01-23T02:10:22.670</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -903,7 +1452,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:21.088</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:44.517</when>
+=======
+        <when>2020-01-23T02:10:23.092</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -912,7 +1465,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:21.298</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:44.742</when>
+=======
+        <when>2020-01-23T02:10:23.514</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -921,7 +1478,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:21.720</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:45.160</when>
+=======
+        <when>2020-01-23T02:10:23.830</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -930,16 +1491,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:21.720</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.20582803389831,32.10625380168067,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:22.036</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:45.498</when>
+=======
+        <when>2020-01-23T02:10:24.147</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -948,7 +1504,37 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:22.353</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:45.944</when>
+=======
+        <when>2020-01-23T02:10:24.464</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.20582803389831,32.10625380168067,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:46.255</when>
+=======
+        <when>2020-01-23T02:10:24.885</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.2016888087167,32.10601755126051,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:46.562</when>
+=======
+        <when>2020-01-23T02:10:25.096</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -957,78 +1543,9 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:22.670</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:23.092</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.18958953510896,32.10785303529412,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:23.514</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.18753053591606,32.10378225882353,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:23.830</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.18910131880549,32.103618700840336,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:24.147</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.19597880064568,32.10154696638656,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:24.464</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.20319591121872,32.1031462,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:24.885</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.20746249717514,32.10254648739496,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:25.096</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.20792948668281,32.10470908739496,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:46.788</when>
+=======
         <when>2020-01-23T02:10:25.519</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
@@ -1039,33 +1556,7 @@
     <Placemark>
       <TimeStamp>
         <when>2020-01-23T02:10:25.523</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.20582803389831,32.10625380168067,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:25.839</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.2016888087167,32.10601755126051,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:26.155</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:26.471</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -1074,7 +1565,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:26.893</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:47.243</when>
+=======
+        <when>2020-01-23T02:10:25.839</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -1083,7 +1578,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:27.316</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:47.652</when>
+=======
+        <when>2020-01-23T02:10:26.155</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -1092,79 +1591,67 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:47.961</when>
+=======
+        <when>2020-01-23T02:10:26.471</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18910131880549,32.103618700840336,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:48.267</when>
+=======
+        <when>2020-01-23T02:10:26.893</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19597880064568,32.10154696638656,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:48.602</when>
+=======
+        <when>2020-01-23T02:10:27.316</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.20319591121872,32.1031462,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:48.943</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.20746249717514,32.10254648739496,0.0</coordinates>
+=======
         <when>2020-01-23T02:10:27.633</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.18910131880549,32.103618700840336,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:49.147</when>
+=======
         <when>2020-01-23T02:10:27.949</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.18753053591606,32.10378225882353,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:28.266</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.18958953510896,32.10785303529412,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:28.687</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.18753053591606,32.10378225882353,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:29.003</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.18910131880549,32.103618700840336,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:29.320</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.19597880064568,32.10154696638656,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:29.637</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.20319591121872,32.1031462,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:30.060</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.20746249717514,32.10254648739496,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:30.271</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -1173,7 +1660,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:30.693</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:49.497</when>
+=======
+        <when>2020-01-23T02:10:28.266</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -1182,7 +1673,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:31.009</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:49.802</when>
+=======
+        <when>2020-01-23T02:10:28.687</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -1191,88 +1686,45 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:31.326</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:50.111</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:31.431</when>
+=======
+        <when>2020-01-23T02:10:29.003</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
-        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
+        <coordinates>35.18910131880549,32.103618700840336,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:31.747</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:50.337</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:32.169</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.18958953510896,32.10785303529412,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:32.591</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.18753053591606,32.10378225882353,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:32.908</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.18910131880549,32.103618700840336,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:33.223</when>
+=======
+        <when>2020-01-23T02:10:29.320</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.19597880064568,32.10154696638656,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:33.435</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.18910131880549,32.103618700840336,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:33.751</when>
-      </TimeStamp>
-      <styleUrl>#0</styleUrl>
-      <Point>
-        <coordinates>35.19597880064568,32.10154696638656,0.0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <TimeStamp>
-        <when>2020-01-23T02:10:34.068</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:50.743</when>
+=======
+        <when>2020-01-23T02:10:29.637</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -1281,7 +1733,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:34.489</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:51.194</when>
+=======
+        <when>2020-01-23T02:10:30.060</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -1290,7 +1746,11 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
-        <when>2020-01-23T02:10:34.701</when>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:51.504</when>
+=======
+        <when>2020-01-23T02:10:30.271</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
@@ -1299,24 +1759,268 @@
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:51.910</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
+=======
+        <when>2020-01-23T02:10:30.693</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.20582803389831,32.10625380168067,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:52.252</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
+=======
+        <when>2020-01-23T02:10:31.009</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.2016888087167,32.10601755126051,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:52.484</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
+=======
+        <when>2020-01-23T02:10:31.326</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:52.820</when>
+=======
+        <when>2020-01-23T02:10:31.431</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:53.048</when>
+=======
+        <when>2020-01-23T02:10:31.747</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:53.385</when>
+=======
+        <when>2020-01-23T02:10:32.169</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:53.607</when>
+=======
+        <when>2020-01-23T02:10:32.591</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:53.946</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
+=======
+        <when>2020-01-23T02:10:32.908</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18910131880549,32.103618700840336,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:54.175</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
+=======
+        <when>2020-01-23T02:10:33.223</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19597880064568,32.10154696638656,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:54.508</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
+=======
+        <when>2020-01-23T02:10:33.435</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.18910131880549,32.103618700840336,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:54.729</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
+=======
+        <when>2020-01-23T02:10:33.751</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19597880064568,32.10154696638656,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:55.068</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
+=======
+        <when>2020-01-23T02:10:34.068</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.20319591121872,32.1031462,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:55.295</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
+=======
+        <when>2020-01-23T02:10:34.489</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.20746249717514,32.10254648739496,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:55.639</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
+=======
+        <when>2020-01-23T02:10:34.701</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.20792948668281,32.10470908739496,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:55.864</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
+=======
         <when>2020-01-23T02:10:35.123</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.20582803389831,32.10625380168067,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:56.201</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
+=======
         <when>2020-01-23T02:10:35.229</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
         <coordinates>35.20582803389831,32.10625380168067,0.0</coordinates>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:56.434</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+=======
         <when>2020-01-23T02:10:35.545</when>
       </TimeStamp>
       <styleUrl>#0</styleUrl>
@@ -1339,16 +2043,39 @@
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
         <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
       <TimeStamp>
+<<<<<<< HEAD
+        <when>2020-01-26T23:56:56.770</when>
+=======
         <when>2020-01-23T02:10:36.600</when>
+>>>>>>> f94db6a43331036cc07d3a93bdb9ca83efe5ec7b
       </TimeStamp>
       <styleUrl>#0</styleUrl>
       <Point>
-        <coordinates>35.18958953510896,32.10785303529412,0.0</coordinates>
+        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+        <when>2020-01-26T23:56:56.995</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.19341035835351,32.10610841680672,0.0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <TimeStamp>
+        <when>2020-01-26T23:56:57.332</when>
+      </TimeStamp>
+      <styleUrl>#0</styleUrl>
+      <Point>
+        <coordinates>35.197528356739305,32.1053088,0.0</coordinates>
       </Point>
     </Placemark>
   </Document>

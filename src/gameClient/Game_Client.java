@@ -80,8 +80,6 @@ public class Game_Client extends  JFrame  implements ActionListener, MouseListen
 	}
 	public void setFruits()
 	{
-		
-		
 		this.Fruit=new ArrayList<Fruit>();
 		Iterator<String> f_iter = game.getFruits().iterator();
 		while (f_iter.hasNext())

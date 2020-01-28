@@ -1,6 +1,8 @@
 package dataStructure;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -16,6 +18,9 @@ public class Robot {
 	double value;
 	double speed;
 	private Fruit RF =new Fruit();
+	Point3D fpos;
+	public   LinkedList<node_data> path=new LinkedList<node_data>();
+
 	public  Robot(String JASON) {
 		 try {
 			JSONObject line = new JSONObject(JASON);
@@ -25,6 +30,7 @@ public class Robot {
 			this.dest = ttt.getInt("dest");
 			Point3D p=new Point3D(ttt.getString("pos"));
 			this.pos=p;
+			this.path=this.getpath();
 		 }catch(JSONException e) {e.printStackTrace();
 		 
 		 }
@@ -34,6 +40,8 @@ public class Robot {
 		this.id=id;
 		this.value=value;
 		this.RF=f;
+		this.path=this.getpath();
+
 	}
 	public Robot(int src, int id, Point3D pos, int dest, double value) 
 	{
@@ -42,6 +50,7 @@ public class Robot {
 		this.pos = pos;
 		this.dest = dest;
 		this.value = value;
+		this.path=this.getpath();
 	}
 	
 	public void SetFruit(Fruit f) {
@@ -49,6 +58,14 @@ public class Robot {
 	}
 	public Fruit getFruit() {
 		return this.RF;
+	}
+	public void setfpos(Fruit f) {
+		this.fpos=new Point3D(f.getPOS());
+		
+	}
+	public Point3D getfpos() {
+		return this.fpos;
+		
 	}
 
 	public void init(String JASON) {
@@ -61,6 +78,7 @@ public class Robot {
 			this.speed=ttt.getDouble("speed");
 			Point3D p=new Point3D(ttt.getString("pos"));
 			this.pos=p;
+			this.path=this.getpath();
 		 }catch(JSONException e) {e.printStackTrace();
 		 
 		 }
@@ -110,6 +128,15 @@ public class Robot {
 	{
 		return this.value;
 	}
+
+	public LinkedList<node_data> getpath()
+	{
+		return this.path;
+	}
+	public void setpath(LinkedList<node_data> p)
+	{
+		this.path=p;
+	}
 	public double getSpeed() {
 		return this.speed;
 	}
@@ -122,10 +149,14 @@ public class Robot {
 		if(numofsrc==numofdest && numofsrc==3) return true;
 		return false;
 	}
-	public void initarr() {
+	public void arr()
+	{
+		System.out.println(this.arr);
+
 		this.arr=new ArrayList<Integer>();
 	}
 	public void addint(int a) {
 		arr.add(a);
 	}
 }
+

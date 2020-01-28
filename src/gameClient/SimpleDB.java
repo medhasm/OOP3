@@ -20,8 +20,8 @@ public class SimpleDB {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-			int id1 = 999;  // "dummy existing ID  
-			int level = 0;
+			int id1 = 206953127;  // "dummy existing ID  
+			int level = 3;
 			allUsers();
 			printLog();
 			String kml = getKML(id1,level);
@@ -42,8 +42,7 @@ public class SimpleDB {
 				
 				while(resultSet.next())
 				{
-					System.out.println("Id: " + resultSet.getInt("UserID")+","+resultSet.getInt("levelID")+","+resultSet.getInt("moves")+","+resultSet.getDate("time"));
-				}
+					System.out.println("Id: " + resultSet.getInt("UserID")+","+resultSet.getInt("levelID")+","+resultSet.getInt("moves")+","+resultSet.getDate("time")+", "+resultSet.getInt("score"));				}
 				resultSet.close();
 				statement.close();		
 				connection.close();		
