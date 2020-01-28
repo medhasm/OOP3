@@ -18,6 +18,7 @@ public class Robot {
 	double value;
 	double speed;
 	private Fruit RF =new Fruit();
+	Point3D fpos;
 	public   LinkedList<node_data> path=new LinkedList<node_data>();
 
 	public  Robot(String JASON) {
@@ -57,6 +58,14 @@ public class Robot {
 	}
 	public Fruit getFruit() {
 		return this.RF;
+	}
+	public void setfpos(Fruit f) {
+		this.fpos=new Point3D(f.getPOS());
+		
+	}
+	public Point3D getfpos() {
+		return this.fpos;
+		
 	}
 
 	public void init(String JASON) {

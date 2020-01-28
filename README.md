@@ -1,4 +1,5 @@
 # This is our  third assignment 
+* By: Aseel Nemer & Medhat Samara
 
 In this project is repesenting a game .
 

@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-
+ 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontMetrics;
@@ -63,9 +63,12 @@ private int width=900;
 private static  Logger_KML kml;
 private int scenario;
 private int id;
+
 public static long t;
+
 private Image mBuffer_image;
 private Graphics mBuffer_graphics;
+
 	
 	public MyGameGUIauto()  {
 		this.setTitle("The Maza Of Waze");
@@ -77,7 +80,7 @@ private Graphics mBuffer_graphics;
 		banana = Toolkit.getDefaultToolkit().createImage("banana.png");
 		//String ID= JOptionPane.showInputDialog("Please insert your ID");
 		//id =Integer.parseInt(ID);
-		id=206953127;
+		id=999;
 		String level= JOptionPane.showInputDialog(this,"Please insert Level between [0,23]");
 		scenario =Integer.parseInt(level);
 		
@@ -97,7 +100,7 @@ private Graphics mBuffer_graphics;
 		graph.init(g);
 		gg.init(g);
 		min_max();
-		t=105;
+		//t=105;
 		kml=new Logger_KML(scenario);
 		JSONObject line;
 		String info = game.toString();
@@ -123,14 +126,27 @@ private Graphics mBuffer_graphics;
 			int c= 0;
 			Robot b ;
 			int af=0;
+					fruit12=new ArrayList(Fruit);
+			int f=this.maxfv(fruit12);			
 			for(int a = 0;a<rs ;a++) {
-				if(Fruit.get(c)!=null  && c<Fruit.size()){
-					
-					EdgeData edge=GetFE(graph,Fruit.get(c));
+				if(a==0) {
+
+					EdgeData edge=GetFE(graph,Fruit.get(f));
+					src_node= edge.getSrc();
+					b=new Robot(src_node,a,0,Fruit.get(f));
+					Robots.add(b);
+						game.addRobot(src_node);
+						Fruit.remove(f);
+						continue;
+				}
+				if(Fruit!=null){
+					f=this.maxfv(Fruit);
+					EdgeData edge=GetFE(graph,Fruit.get(f));
 							src_node= edge.getSrc();
-							b=new Robot(src_node,a,0,Fruit.get(c));
+							b=new Robot(src_node,a,0,Fruit.get(f));
 							Robots.add(b);
 							game.addRobot(src_node);	
+							Fruit.remove(f);
 				}
 				else 
 				{
@@ -141,6 +157,7 @@ private Graphics mBuffer_graphics;
 				}
 					c++;
 				}
+			Fruit=new ArrayList(fruit12);
 			}
 		
 		catch (JSONException e) {e.printStackTrace();}
@@ -297,14 +314,20 @@ private Graphics mBuffer_graphics;
 		{
 			game.startGame();
 			int ind=0;
-			long time=150;
+			long time=110;
 			int jj = 0;
 			
 			while(game.isRunning()) {
+				t=110;
 			try {	
 					moveRobots(game, gg,graph);
 					if(ind%1==0)this.repaint();
-					Thread.sleep(t);
+					if(t<time) {
+						System.out.println(t);
+						Thread.sleep(t);
+					}
+						
+					else Thread.sleep(time);
 					jj++;
 					ind++;			
 			} 
@@ -339,9 +362,11 @@ private Graphics mBuffer_graphics;
 	
 	public static void moveRobots(game_service game,  Graph_Algo gg ,DGraph graph) {
 		List<String> log = game.move();
+		
+		long ti = game.timeToEnd();
 		if(log!=null)
 		{
-			long t = game.timeToEnd();
+			
 			for(int i=0;i<log.size();i++)
 			{
 				String robot_json = log.get(i);
@@ -357,25 +382,67 @@ private Graphics mBuffer_graphics;
 				}
 				
 			}
+		}
 			setfruit();
 			fruit12=new LinkedList<Fruit>(Fruit);
 			int dest=0;
 			for(Robot r:Robots) 
 			{
+				kml.placemark(r.getpos(), r.getid());
 				if(r.getdest()==-1)
 				{
 					dest=nextNode(graph,gg,r);
+					if(dest!=-1) {
 					game.chooseNextEdge(r.getid(), dest);
-					if(r.getpath().size()==0)
-						r.getFruit().set_boolean(false);
-					kml.placemark(r.getpos(), r.getid());
-					System.out.println("Turn to node: "+dest+"  time to end:"+(t/1000));
+					
+					System.out.println("Turn to node: "+dest+"  time to end:"+(ti/1000));
+					}
+					
+				}else {
+					double de,drf;
+					long dd;
+					
+						if(r.getFruit()!=null) {
+						EdgeData edge =GetFE(graph,r.getFruit());
+						if(r.getdest()!=-1) {
+							if(r.getdest()==edge.getDest()) {
+								if(r.getsrc()==edge.getSrc()) {
+								Point3D p1 , p2;
+								p1=graph.getNode(edge.getSrc()).getLocation();
+								p2=graph.getNode(edge.getDest()).getLocation();
+						        de=Delta(p1,p2);
+								 drf=Delta(r.getpos(),r.getFruit().getPOS());
+								 
+							 dd=(long) (((drf/de)*edge.getWeight())/r.getSpeed());
+								if(-(Epsilon)*2<=drf || drf<=Epsilon*2 ) {
+									t=30;
+								Robots.get(r.getid()).SetFruit(null);
+								}
+								
+									
+								}	
+								
+							}
+					
 				}
-			}
-		}
+				
+			
 		}
 		
-	public static  void setfruit()
+	}
+			}
+	}
+		
+					
+				public static double Delta(Point3D p1,Point3D p2) {
+					double delta=0;
+				double dx=	Math.pow((p1.x()-p2.x()),2);
+				double dy=Math.pow((p1.y()-p2.y()),2);
+				delta=Math.sqrt((dx+dy));
+					return delta;
+				}
+
+	public static void setfruit()
 	{
 		int i=0;
 		Fruit=new ArrayList<Fruit>();
@@ -456,17 +523,40 @@ private Graphics mBuffer_graphics;
 		
 		return null;
 	}
-	
+	public static int maxfv(List<dataStructure.Fruit> fruit122) {
+		Fruit f=new Fruit();
+		int ind=0;
+		double cv=0;
+		for(int i=0;i<fruit122.size();i++) {
+			if(fruit122.get(i).getValue()>cv) {
+				cv=fruit122.get(i).getValue();
+			ind=i;
+			}
+		}
+		return ind;
+	}
+	public static boolean isOn(List<Fruit> A,Fruit f) {
+		boolean ison=false;
+		for(int i=0;i<A.size();i++) {
+			if(A.get(i).getPOS().equals(f.getPOS())) {
+				System.out.println(A.get(i).getPOS().equals(f.getPOS()));
+				ison=true;
+			}
+		}
+		return ison;
+		
+	}
 	public static int nextNode(DGraph g, Graph_Algo gg,Robot robot) {
 		  
 	        LinkedList<node_data> path=robot.getpath();
 	        System.out.println(path.size());
 	        double min_path=Double.MAX_VALUE;
-	        Fruit fsrc=new Fruit();
-	        int fr=0;
-	        if(path.isEmpty()) {
+	        Fruit fsrc=new Fruit();  
+	        if(path.isEmpty() || ((!path.isEmpty()) && robot.getFruit()!= null &&(!isOn(Fruit,robot.getFruit())))) {
+	        	Robots.get(robot.getid()).SetFruit(null);
 	        	for(int f=0;f<Fruit.size();f++)
 	        	{
+	        		if(Fruit.get(f).getValue()==0) Fruit.get(f).set_boolean(true);
 	        		if (Fruit.get(f).get_boolean()==true)
 	        			continue;
 	        		edge_data f_edge=Fruit.get(f).getedge();
@@ -480,14 +570,12 @@ private Graphics mBuffer_graphics;
 	        			fsrc=Fruit.get(f);
 	        			if(!(g.getNode(Fruit.get(f).getedge().getDest()).getKey()==robot.getdest()))
 	        				path.add(g.getNode(Fruit.get(f).getedge().getDest()));	
-	        			fr=f;
+
+	        			Robots.get(robot.getid()).SetFruit(fsrc);
 	        		}  
-	        		
+	
+	        	}
 	        }
-	        	Fruit.get(fr).set_boolean(true);
-	        	robot.SetFruit(Fruit.get(fr));
-	        }
-	        
 	       for(int i=0;i<path.size();i++)
 	       {
 	    	   
@@ -499,11 +587,16 @@ private Graphics mBuffer_graphics;
 	    	   	    	   
 	       }
 	        robot.setpath(path);
-	        t=103;
+
+	        //t=110;
+	        long df=150;
 	       if(!path.isEmpty())
 	       {	
+	    	   
 	    	   if(path.size()==1)
-	    		   t=121;
+ 		   //if(df<t) t=df;
+	    		  t=98;
+	    		   
 	    	   node_data n = path.get(0);
 		        path.remove(0);
 		        robot.setpath(path);
