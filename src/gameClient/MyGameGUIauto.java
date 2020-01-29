@@ -78,22 +78,15 @@ private Graphics mBuffer_graphics;
 		robot = Toolkit.getDefaultToolkit().createImage("Robot.png");
 		apple = Toolkit.getDefaultToolkit().createImage("apple.png");
 		banana = Toolkit.getDefaultToolkit().createImage("banana.png");
-		//String ID= JOptionPane.showInputDialog("Please insert your ID");
-		//id =Integer.parseInt(ID);
-		id=999;
+		String ID= JOptionPane.showInputDialog("Please insert your ID");
+		id =Integer.parseInt(ID);
+		
 		String level= JOptionPane.showInputDialog(this,"Please insert Level between [0,23]");
 		scenario =Integer.parseInt(level);
 		
-		/**if (scenario<=23&&scenario>=0)
-		{
 			Game_Server.login(id);
 			 game = Game_Server.getServer(scenario); // you have [0,23] games
-		}else {
-			Game_Server.login(id);
-			game=Game_Server.getServer(0);
-		}*/
-		Game_Server.login(id);
-		 game = Game_Server.getServer(scenario); 
+		
 		String g = game.getGraph();
 		gg = new Graph_Algo();
 		graph=new DGraph();
